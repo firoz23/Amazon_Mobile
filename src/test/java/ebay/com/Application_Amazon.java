@@ -13,7 +13,7 @@ public class Application_Amazon extends CommonUtils {
 		{
 			Thread.sleep(3000);
 		    AndroidElement element = null;
-		    element = driver.findElementById("skip_sign_in_button");
+		    element = driver.findElementById(fetchLocator("Login.Obj1"));
 		    element.click();
 		}
 		
