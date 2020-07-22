@@ -12,7 +12,8 @@ public class DriverTestFile {
 	@BeforeTest
 	public void connectionToMobile() throws Exception, InterruptedException
 	{
-		//amz.connectToBrowserStack();
+		amz.connectToBrowserStack();
+		System.out.println("Befor Class executed");
 	}
 	
 	
@@ -20,10 +21,12 @@ public class DriverTestFile {
 	public void purchage_Item_test() throws Exception
 	{
 		
-		//amz.loginToApplication();
-		//amz.search_Items("65 inch TV");
-		//amz.fetchLocator("djfjd");
-		amz.fetchData("Test001","username");	
+			amz.loginToApplication();
+			
+			amz.search_Items();
+			
+			amz.checkOutProduct_screen();
+			
 		
 	}
 
@@ -31,7 +34,7 @@ public class DriverTestFile {
 	@AfterTest
 	public void end_Test()
 	{
-		//amz.End_Test();
+		amz.End_Test();
 	}
 	
 }

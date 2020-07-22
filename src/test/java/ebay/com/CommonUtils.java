@@ -48,6 +48,7 @@ public class CommonUtils {
 	 Map<String, List <String>> TestData = new HashMap<String, List<String>>();
 	 List<String> list = new ArrayList<String>();
 	  Map <String,String> Locators= new HashMap<String,String>();
+	  String text = null;
 	  
 	public void connectToBrowserStack() throws MalformedURLException, InterruptedException
 	{
@@ -58,7 +59,7 @@ public class CommonUtils {
 	    caps.setCapability("os_version", "9.0");
 	    caps.setCapability("project", "My First Project");
 	    caps.setCapability("build", "My First Build");
-	    caps.setCapability("name", "Bstack-[Java] Sample Test");
+	    caps.setCapability("name", "Bstack-[Java] Amazon_Test");
 	    caps.setCapability("app", "bs://fc6e56726f3f10e329c1c2801980a73cdd684bb8");
 	    
 	    // Android driver initialization
@@ -109,7 +110,7 @@ public class CommonUtils {
             new TouchAction(driver)
             .press(PointOption.point(startX, startY))
             .waitAction(WaitOptions.waitOptions(Duration.ofMillis(1300)))
-            .moveTo(PointOption.point(endX, endY))
+            .moveTo(PointOption.point(startX, endY))
             .release()
             .perform();
             break;
@@ -120,7 +121,7 @@ public class CommonUtils {
             new TouchAction(driver)
             .press(PointOption.point(startX, startY))
             .waitAction(WaitOptions.waitOptions(Duration.ofMillis(1300)))
-            .moveTo(PointOption.point(endX, endY))
+            .moveTo(PointOption.point(startX, endY))
             .release()
             .perform();
             break;
@@ -235,14 +236,16 @@ public class CommonUtils {
 			switch(Data_Value)
 				{
 				case "username" :
-					System.out.println(values.get(1));
+					//for testing the working of logic
+					//System.out.println(values.get(1));
 				 return values.get(1);
 				case "password" :
 					return values.get(2);
 				case "data1" :
 					return values.get(3);
 				case "data2" :
-					System.out.println(values.get(4));
+					//for testing the working of logic
+					//System.out.println(values.get(4));
 					return values.get(4);
 					
 					default:
