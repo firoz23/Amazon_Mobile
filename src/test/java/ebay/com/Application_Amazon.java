@@ -96,10 +96,7 @@ public class Application_Amazon extends CommonUtils {
 		// Check out the item in cart and pick all description and compare with search item
 		public void checkOutProduct_screen()
 		{
-			AndroidElement element = null;
-			//element = driver.findElementById("loc_ux_gps_auto_detect");
-			//element.click();
-			//Model of the TV
+			
 			Assert.assertEquals(false, text.contentEquals("TV 65X8000H"));
 			Assert.assertEquals(true, text.contentEquals("2020 Model"));
 			Assert.assertEquals(true, text.contentEquals("Sony Bravia"));
